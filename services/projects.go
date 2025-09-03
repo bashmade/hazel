@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/freekobie/hazel/models"
 	"github.com/google/uuid"
+	"github.com/luckmade/hazel/models"
 )
 
 func (s *WorkspaceService) CreateProject(ctx context.Context, project *models.Project) error {

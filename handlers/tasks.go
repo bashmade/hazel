@@ -6,13 +6,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/freekobie/hazel/models"
-	"github.com/freekobie/hazel/services"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/luckmade/hazel/models"
+	"github.com/luckmade/hazel/services"
 )
 
 // CreateTask godoc
+//
 //	@Summary		Create task
 //	@Description	Create a new task in a project
 //	@Security		BearerAuth
@@ -55,17 +56,18 @@ func (h *Handler) CreateTask(c *gin.Context) {
 }
 
 // GetTask godoc
-//	@Summary		Get task
-//	@Description	Get a task by ID
-//	@Security		BearerAuth
-//	@Tags			tasks
-//	@Produce		json
-//	@Param			id	path		string	true	"Task ID"
-//	@Success		200	{object}	models.Task
-//	@Failure		400	{object}	map[string]string
-//	@Failure		404	{object}	map[string]string
-//	@Failure		500	{object}	map[string]string
-//	@Router			/tasks/{id} [get]
+
+// @Summary		Get task
+// @Description	Get a task by ID
+// @Security		BearerAuth
+// @Tags			tasks
+// @Produce		json
+// @Param			id	path		string	true	"Task ID"
+// @Success		200	{object}	models.Task
+// @Failure		400	{object}	map[string]string
+// @Failure		404	{object}	map[string]string
+// @Failure		500	{object}	map[string]string
+// @Router			/tasks/{id} [get]
 func (h *Handler) GetTask(c *gin.Context) {
 	id, err := getUUIDparam(c, "id")
 	if err != nil {
@@ -89,6 +91,7 @@ func (h *Handler) GetTask(c *gin.Context) {
 }
 
 // UpdateTask godoc
+//
 //	@Summary		Update task
 //	@Description	Update task details
 //	@Security		BearerAuth
@@ -138,6 +141,7 @@ func (h *Handler) UpdateTask(c *gin.Context) {
 }
 
 // GetProjectTasks godoc
+//
 //	@Summary		Get project tasks
 //	@Description	Get all tasks for a project
 //	@Security		BearerAuth
@@ -172,6 +176,7 @@ func (h *Handler) GetProjectTasks(c *gin.Context) {
 }
 
 // DeleteTask godoc
+//
 //	@Summary		Delete task
 //	@Description	Delete a task by ID
 //	@Tags			tasks
@@ -199,6 +204,7 @@ func (h *Handler) DeleteTask(c *gin.Context) {
 }
 
 // AssignTaskToUser godoc
+//
 //	@Summary		Assign task to user
 //	@Description	Assign a task to a user
 //	@Tags			tasks
@@ -246,6 +252,7 @@ func (h *Handler) AssignTaskToUser(c *gin.Context) {
 }
 
 // RemoveAssignment godoc
+//
 //	@Summary		Remove task assignment
 //	@Description	Remove a user's assignment from a task
 //	@Tags			tasks
@@ -282,6 +289,7 @@ func (h *Handler) RemoveAssignment(c *gin.Context) {
 }
 
 // GetAssignedUsers godoc
+//
 //	@Summary		Get assigned users
 //	@Description	Get all users assigned to a task
 //	@Tags			tasks

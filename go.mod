@@ -1,4 +1,4 @@
-module github.com/freekobie/hazel
+module github.com/luckmade/hazel
 
 go 1.24.1
 

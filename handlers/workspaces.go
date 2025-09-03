@@ -5,13 +5,14 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/freekobie/hazel/models"
-	"github.com/freekobie/hazel/services"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/luckmade/hazel/models"
+	"github.com/luckmade/hazel/services"
 )
 
 // CreateWorkspace godoc
+//
 //	@Summary		Create workspace
 //	@Description	Create a new workspace
 //	@Tags			workspaces
@@ -50,6 +51,7 @@ func (h *Handler) CreateWorkspace(c *gin.Context) {
 }
 
 // GetWorkspace godoc
+//
 //	@Summary		Get workspace
 //	@Description	Get a workspace by ID
 //	@Tags			workspaces
@@ -83,6 +85,7 @@ func (h *Handler) GetWorkspace(c *gin.Context) {
 }
 
 // GetUserWorkspaces godoc
+//
 //	@Summary		Get my workspaces
 //	@Description	Get all workspaces where the authenticated user has membership
 //	@Tags			workspaces
@@ -109,6 +112,7 @@ func (h *Handler) GetUserWorkspaces(c *gin.Context) {
 }
 
 // UpdateWorkspace godoc
+//
 //	@Summary		Update workspace
 //	@Description	Update workspace details
 //	@Tags			workspaces
@@ -149,6 +153,7 @@ func (h *Handler) UpdateWorkspace(c *gin.Context) {
 }
 
 // DeleteWorkspace godoc
+//
 //	@Summary		Delete workspace
 //	@Description	Delete a workspace by ID
 //	@Tags			workspaces
@@ -177,6 +182,7 @@ func (h *Handler) DeleteWorkspace(c *gin.Context) {
 }
 
 // AddWorkspaceMember godoc
+//
 //	@Summary		Add workspace member
 //	@Description	Add a member to a workspace
 //	@Tags			workspaces
@@ -224,6 +230,7 @@ func (h *Handler) AddWorkspaceMember(c *gin.Context) {
 }
 
 // GetWorkspaceMembers godoc
+//
 //	@Summary		Get workspace members
 //	@Description	Get all members of a workspace
 //	@Tags			workspaces
@@ -258,6 +265,7 @@ func (h *Handler) GetWorkspaceMembers(c *gin.Context) {
 }
 
 // DeleteWorkspaceMember godoc
+//
 //	@Summary		Remove workspace member
 //	@Description	Remove a member from a workspace
 //	@Tags			workspaces

@@ -3,12 +3,12 @@ package main
 import (
 	"os"
 
-	"github.com/freekobie/hazel/mail"
+	"github.com/luckmade/hazel/mail"
 )
 
 type Config struct {
-	MailConfig  *mail.Config
-	PostgresURL string
+	MailConfig    *mail.Config
+	PostgresURL   string
 	ServerAddress string
 }
 
@@ -22,8 +22,8 @@ func loadConfig() *Config {
 	}
 
 	return &Config{
-		MailConfig:  mailCfg,
-		PostgresURL: os.Getenv("DB_URL"),
+		MailConfig:    mailCfg,
+		PostgresURL:   os.Getenv("DB_URL"),
 		ServerAddress: os.Getenv("PORT"),
 	}
 }

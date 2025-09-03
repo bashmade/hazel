@@ -5,13 +5,14 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/freekobie/hazel/models"
-	"github.com/freekobie/hazel/services"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/luckmade/hazel/models"
+	"github.com/luckmade/hazel/services"
 )
 
 // CreateProject godoc
+//
 //	@Summary		Create project
 //	@Description	Create a new project in a workspace
 //	@Tags			projects
@@ -54,6 +55,7 @@ func (h *Handler) CreateProject(c *gin.Context) {
 }
 
 // GetProject godoc
+//
 //	@Summary		Get project
 //	@Description	Get a project by ID
 //	@Tags			projects
@@ -88,6 +90,7 @@ func (h *Handler) GetProject(c *gin.Context) {
 }
 
 // UpdateProject godoc
+//
 //	@Summary		Update project
 //	@Description	Update project details
 //	@Tags			projects
@@ -137,6 +140,7 @@ func (h *Handler) UpdateProject(c *gin.Context) {
 }
 
 // GetProjectsInWorkspace godoc
+//
 //	@Summary		Get projects in workspace
 //	@Description	Get all projects for a workspace
 //	@Tags			projects
@@ -170,6 +174,7 @@ func (h *Handler) GetProjectsInWorkspace(c *gin.Context) {
 }
 
 // DeleteProject godoc
+//
 //	@Summary		Delete project
 //	@Description	Delete a project by ID
 //	@Tags			projects

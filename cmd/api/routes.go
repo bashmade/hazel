@@ -1,13 +1,12 @@
 package main
 
 import (
-	"github.com/freekobie/hazel/docs"
-	"github.com/freekobie/hazel/middlewares"
 	"github.com/gin-gonic/gin"
+	"github.com/luckmade/hazel/docs"
+	"github.com/luckmade/hazel/middlewares"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
-
 
 func (app *application) routes() *gin.Engine {
 	router := gin.New()
@@ -19,7 +18,7 @@ func (app *application) routes() *gin.Engine {
 	open := router.Group("/api/v1")
 	open.GET("/ping", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
-			"status": "200",
+			"status":  "200",
 			"message": "online",
 		})
 	})

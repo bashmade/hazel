@@ -7,13 +7,14 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/freekobie/hazel/models"
-	"github.com/freekobie/hazel/services"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
+	"github.com/luckmade/hazel/models"
+	"github.com/luckmade/hazel/services"
 )
 
 // CreateUser godoc
+//
 //	@Summary		Register a new user
 //	@Description	Create a new user account
 //	@Tags			users
@@ -51,6 +52,7 @@ func (h *Handler) CreateUser(c *gin.Context) {
 }
 
 // VerifyUser godoc
+//
 //	@Summary		Verify user email
 //	@Description	Verify a user's email with a code
 //	@Tags			users
@@ -86,6 +88,7 @@ func (h *Handler) VerifyUser(c *gin.Context) {
 }
 
 // RequestVerification godoc
+//
 //	@Summary		Request verification email
 //	@Description	Request a new verification code for a user
 //	@Tags			users
@@ -127,6 +130,7 @@ func (h *Handler) RequestVerification(c *gin.Context) {
 }
 
 // LoginUser godoc
+//
 //	@Summary		Login user
 //	@Description	Authenticate user and return session tokens
 //	@Tags			users
@@ -163,6 +167,7 @@ func (h *Handler) LoginUser(c *gin.Context) {
 }
 
 // GetUserAccessToken godoc
+//
 //	@Summary		Refresh access token
 //	@Description	Get a new access token using a refresh token
 //	@Tags			users
@@ -200,6 +205,7 @@ func (h *Handler) GetUserAccessToken(c *gin.Context) {
 }
 
 // GetUser godoc
+//
 //	@Summary		Get user by ID
 //	@Description	Get user details by user ID
 //	@Tags			users
@@ -232,6 +238,7 @@ func (h *Handler) GetUser(c *gin.Context) {
 }
 
 // UpdateUserData godoc
+//
 //	@Summary		Update user data
 //	@Description	Update user profile information
 //	@Tags			users
@@ -276,6 +283,7 @@ func (h *Handler) UpdateUserData(c *gin.Context) {
 }
 
 // DeleteUser godoc
+//
 //	@Summary		Delete user
 //	@Description	Delete a user by ID
 //	@Tags			users

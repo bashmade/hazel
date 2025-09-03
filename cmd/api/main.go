@@ -8,20 +8,20 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/freekobie/hazel/handlers"
-	"github.com/freekobie/hazel/mail"
-	"github.com/freekobie/hazel/postgres"
-	"github.com/freekobie/hazel/services"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/joho/godotenv"
+	"github.com/luckmade/hazel/handlers"
+	"github.com/luckmade/hazel/mail"
+	"github.com/luckmade/hazel/postgres"
+	"github.com/luckmade/hazel/services"
 )
 
-//	@title			Hazel Project Management API
-//	@version		1.0
-//	@description	This is the backend API for the Hazel project management application.
-//	@contact.name	API Support
-//	@contact.url	https://github.com/freekobie/hazel
-//	@contact.email	support@hazel.local
+// @title			Hazel Project Management API
+// @version		1.0
+// @description	This is the backend API for the Hazel project management application.
+// @contact.name	API Support
+// @contact.url	https://github.com/luckmade/hazel
+// @contact.email	support@hazel.local
 func main() {
 
 	_ = godotenv.Load()
